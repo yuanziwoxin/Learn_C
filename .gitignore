@@ -81,3 +81,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# dev c++ original files
+*.win
+*.dev
+*.layout
