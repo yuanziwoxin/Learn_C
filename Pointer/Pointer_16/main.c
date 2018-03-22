@@ -46,9 +46,22 @@ void sort_string(char *name[],int n)
 //输出字符串 
 void print_string(char *name[],int n)
 {
+	/*
+	//方法一： 
 	int i;
 	for(i=0;i<n;i++)
 	{
 		printf("%s\n",name[i]);	
+	} 
+	*/
+	//方法一改进：即方法二 
+	int i=0;
+	char *p;
+	p=name[0];//name[0]的值也是地址
+	while(i<n)
+	{
+		//name为数组名，即表示name[0]的地址，name+i表示name[i]的地址，*(name+i)表示name[i]的值（即地址）所指向的存储单元的值。 
+		p=*(name+i++);
+		printf("%s\n",p);
 	} 
 }
